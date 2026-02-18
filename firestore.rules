@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      // Notes subcollection
+      match /notes/{noteId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Favorites subcollection
+      match /favorites/{favoriteId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Events subcollection (for Event Countdown)
+      match /events/{eventId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Tasks subcollection (for Task Reminder)
+      match /tasks/{taskId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      // Habits subcollection (for Habit Tracker)
+      match /habits/{habitId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+        
+        // History subcollection: track daily/weekly/monthly completions
+        match /history/{dateId} {
+          allow read, write: if request.auth != null && request.auth.uid == userId;
+        }
+        
+        // Reminders subcollection: store notification times/settings
+        match /reminders/{reminderId} {
+          allow read, write: if request.auth != null && request.auth.uid == userId;
+        }
+        
+        // Achievements subcollection: badges, milestones
+        match /achievements/{achievementId} {
+          allow read, write: if request.auth != null && request.auth.uid == userId;
+        }
+      }
+    }
+  }
+}
