@@ -68,8 +68,25 @@ To run this project locally:
    ```
 2. **Setup Firebase:**
    - Create a project on the [Firebase Console](https://console.firebase.google.com/).
-   - Add an Android app and download the `google-services.json`.
-   - Place `google-services.json` in the `app/` directory.
+   - Add an Android app with your package name (`com.example.smartlifedashboard`).
+   - **Important:** Add your **SHA-1 fingerprint** in Project Settings for Google Sign-In to work.
+   - Download the `google-services.json` and place it in the `app/` directory.
+   - **Enable Authentication:** Go to *Authentication > Sign-in method* and enable **Google**.
+   - **Setup Firestore:** Go to *Firestore Database* and create a database.
+   - **Set Security Rules:** Use the following rules (also found in `firestore.rules`):
+     ```javascript
+     rules_version = '2';
+     service cloud.firestore {
+       match /databases/{database}/documents {
+         match /users/{userId} {
+           allow read, write: if request.auth != null && request.auth.uid == userId;
+           match /{document=**} {
+             allow read, write: if request.auth != null && request.auth.uid == userId;
+           }
+         }
+       }
+     }
+     ```
 3. **Open in Android Studio:**
    - Wait for Gradle sync to complete.
    - Run the app on an emulator or physical device.
