@@ -31,15 +31,30 @@
 
 ## 🎨 Screenshots
 
-| Splash Screen | Login Screen | Dashboard | Weather |
-| :---: | :---: | :---: | :---: |
-| <img src="Screenshot/1_splash_screen.png" width="200"> | <img src="Screenshot/2_login_screen.png" width="200"> | <img src="Screenshot/4_home_screen.png" width="200"> | <img src="Screenshot/5_weather_screen.png" width="200"> |
+### Onboarding & Profile
+| Splash Screen | Login | Sign-in Loading | Profile | About App |
+| :---: | :---: | :---: | :---: | :---: |
+| <img src="Screenshot/1_splash_screen.png" width="160"> | <img src="Screenshot/2_login_screen.png" width="160"> | <img src="Screenshot/3_signin_loading_screen.png" width="160"> | <img src="Screenshot/17_profile_section.png" width="160"> | <img src="Screenshot/18_about_app.png" width="160"> |
 
-### Other Sections
-
-| Task Reminders | Habit Tracker | Quick Notes | Event Countdown |
+### Core Experience
+| Dashboard | Weather | Quotes | Favourite Quotes |
 | :---: | :---: | :---: | :---: |
-| <img src="Screenshot/8_task_reminder.png" width="200"> | <img src="Screenshot/10_habit_tracker.png" width="200"> | <img src="Screenshot/13_quick_notes.png" width="200"> | <img src="Screenshot/15_event_section.png" width="200"> |
+| <img src="Screenshot/4_home_screen.png" width="160"> | <img src="Screenshot/5_weather_screen.png" width="160"> | <img src="Screenshot/6_quotes_screen.png" width="160"> | <img src="Screenshot/7_favourite_quotes.png" width="160"> |
+
+### Tasks & Notes
+| Task Reminders | Add Task | Quick Notes | Add/Edit Notes |
+| :---: | :---: | :---: | :---: |
+| <img src="Screenshot/8_task_reminder.png" width="160"> | <img src="Screenshot/9_add_task.png" width="160"> | <img src="Screenshot/13_quick_notes.png" width="160"> | <img src="Screenshot/14_add_or_edit_notes.png" width="160"> |
+
+### Habit Tracker
+| Habit Tracker | Add Habit | Habit Record |
+| :---: | :---: | :---: |
+| <img src="Screenshot/10_habit_tracker.png" width="160"> | <img src="Screenshot/11_add_habit.png" width="160"> | <img src="Screenshot/12_habit_record.png" width="160"> |
+
+### Event Countdown
+| Event Section | Add Event |
+| :---: | :---: |
+| <img src="Screenshot/15_event_section.png" width="160"> | <img src="Screenshot/16_add_event.png" width="160"> |
 
 ---
 
