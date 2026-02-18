@@ -74,20 +74,7 @@ To run this project locally:
    - Download the `google-services.json` and place it in the `app/` directory.
    - **Enable Authentication:** Go to *Authentication > Sign-in method* and enable **Google**.
    - **Setup Firestore:** Go to *Firestore Database* and create a database.
-   - **Set Security Rules:** Apply the rules below (you can also simply copy from the `firestore.rules` file in the root):
-     ```javascript
-     rules_version = '2';
-     service cloud.firestore {
-       match /databases/{database}/documents {
-         match /users/{userId} {
-           allow read, write: if request.auth != null && request.auth.uid == userId;
-           match /{document=**} {
-             allow read, write: if request.auth != null && request.auth.uid == userId;
-           }
-         }
-       }
-     }
-     ```
+   - **Set Security Rules:** Open the `firestore.rules` file in the project root, copy the contents, and paste them into the **Rules** tab of your Firebase Firestore console. This ensures proper data isolation for each user.
 3. **Open in Android Studio:**
    - Wait for Gradle sync to complete.
    - Run the app on an emulator or physical device.
