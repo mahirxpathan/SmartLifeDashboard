@@ -67,13 +67,14 @@ To run this project locally:
    git clone https://github.com/YOUR_USERNAME/SmartLifeDashboard.git
    ```
 2. **Setup Firebase:**
+   > ⚠️ **Note:** To run this app, you **must** setup Google Sign-In and apply the Firestore Security Rules (available in the `firestore.rules` file).
    - Create a project on the [Firebase Console](https://console.firebase.google.com/).
    - Add an Android app with your package name (`com.example.smartlifedashboard`).
    - **Important:** Add your **SHA-1 fingerprint** in Project Settings for Google Sign-In to work.
    - Download the `google-services.json` and place it in the `app/` directory.
    - **Enable Authentication:** Go to *Authentication > Sign-in method* and enable **Google**.
    - **Setup Firestore:** Go to *Firestore Database* and create a database.
-   - **Set Security Rules:** Use the following rules (also found in `firestore.rules`):
+   - **Set Security Rules:** Apply the rules below (you can also simply copy from the `firestore.rules` file in the root):
      ```javascript
      rules_version = '2';
      service cloud.firestore {
