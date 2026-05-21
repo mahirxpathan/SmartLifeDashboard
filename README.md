@@ -83,7 +83,7 @@ To run this project locally:
 
 ## 🌿 Credits
 
-- **Developer:** Mahir Khan Pathan
+- **Developer:** Mahiri
 - **Design Inspiration:** Modern minimalist dashboard aesthetics.
 
 ---
@@ -91,3 +91,6 @@ To run this project locally:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+**Developed with ❤️ by Mahiri.**
